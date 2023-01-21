@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+h1 { font-family: "Rockwell Extra Bold"; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+
+body {
+  font-family: Lucida Sans Typewriter;
+  padding: 10px;
+  background: #1d014e;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #000000;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #040404;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #000000;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #1d014e;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #000000;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: #000000;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #000000;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+img {
+  width: 100%;
+}
+</style>
+</head>
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<body>
+
+<div class="header">
+  <h1 style="color:#00FF00;" >Sabishi Text RPG</h1>
+  <p style="color:#00FF00;" >A samurai themed Python text RPG game made on the Raspberry Pi.</p>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 style="color:#00FF00;" >Welcome!</h2>
+      <div class="fakeimg" style="height:200px;"><img src="banner1.png" alt="Logo" width="300" height="150"></div>
+      <p style="color:#00FF00;" >Will you survive?</p>
+      <p style="color:#00FF00;" >Sabishi is a fun RPG game set in feudal Japan. Battle enemys like ronin and samurai that have different attacks. Face bosses and encounter funny NPCs! The aim is to get the highest score you can!</p>
+    </div>
+    <div class="card">
+      <h2 style="color:#00FF00;" >Links</h2>
+      <p style="color:#00FF00;" >Source code: <a href="sourcecode.txt">Click here</a> </p>
+      <p style="color:#00FF00;" >Wiki: <a href="https://sabishi-rpg.fandom.com/wiki/Sabishi_Text_RPG_Wiki">Click here</a> </p>
+      <
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2 style="color:#00FF00;" >About Me</h2>
+      <div class="fakeimg" style="height:200px;"><img src="giphy.gif" alt="Logo" style="width:100%;height:100%;"></div>
+      <p style="color:#00FF00;" >I am learning Python. &#128077; &#x1F60E; &#128187;</p>
+    </div>
+    <div class="card">
+      <h3 style="color:#00FF00;" >Other Projects</h3>
+      <p style="color:#00FF00;" >Coming Soon...</p>
+    </div>
+    <div class="card">
+      <h3 style="color:#00FF00;" >Follow Me</h3>
+      <p style="color:#00FF00;" >Twitter: <a href="https://twitter.com/ArronKnightPi">Click here</a> </p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2 style="color:#00FF00;" >Play Here</h2>
+  <iframe src="https://trinket.io/embed/python/65614451ba?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+</div>
+
+</body>
+</html>
+
+
