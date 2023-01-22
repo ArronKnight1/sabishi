@@ -186,7 +186,7 @@ def battle():
                 battle_mode = False
             #make stats option so the enemy doesnt attack you after you use it, maybe make it a seperate turn?
         elif battle_choose == "stats":
-            print("\n" + str(defult_player.name) + "'s Stats:\nHealth:", str(defult_player.health) + "/" + str(defult_player.max_health) + "\nAttack Power:", str(defult_player.attack_power))
+            print("\n" + str(defult_player.name) + "'s Stat Card:\nHealth:", str(defult_player.health) + "/" + str(defult_player.max_health) + "\nAttack Power:", str(defult_player.attack_power))
             print("\n" + str(encounterd_enemy.species) + "'s Stats:\nHealth:", str(encounterd_enemy.health) + "/" + str(encounterd_enemy.max_health) + "\nAttack 1:", str(encounterd_enemy.attack1), "(" + str(encounterd_enemy.attack1_power) + " dmg" + ")" + "\nAttack 2:", str(encounterd_enemy.attack2), "(" + str(encounterd_enemy.attack2_power) + " dmg" + ")\n")
             time.sleep(1)
         else:
@@ -233,7 +233,7 @@ def choose():
 #stats command
     elif choose == "stats":
         print("")
-        print(str(defult_player.name) + "'s Stats:\nHealth:", str(defult_player.health) + "/" + str(defult_player.max_health) + "\nAttack Power:", str(defult_player.attack_power) + "\nScore:", str(defult_player.score))
+        print(str(defult_player.name) + "'s Stat Card:\nHealth:", str(defult_player.health) + "/" + str(defult_player.max_health) + "\nAttack Power:", str(defult_player.attack_power) + "\nScore:", str(defult_player.score))
     elif choose == "explore":
 #encounter boss or not
         boss_chance = random.randint(1, 15)
@@ -493,6 +493,23 @@ def boss():
                 defult_player.health = defult_player.health - 5
                 if defult_player.health <= 0:
                     death()
+        else:
+            s()
+            print("Incorrect input")
+            s()
+            slowprint("Evil Yokai: 'So you do not even want to play huh. Not supprised weakling.'")
+            s()
+            print("The Evil Yokai swiped at you, you went flying!")
+            s()
+            print("You lost -5 health")
+            s()
+            print("You ran away from the Evil Yokai.")
+            s()
+            defult_player.health = defult_player.health - 5
+            if defult_player.health <= 0:
+                death()
+
+
 #boss2
     if boss_choose == 2:
         slowprint("???: 'A human... wooow'.\nA being not from this earth has spotted you!")
@@ -515,7 +532,7 @@ def boss():
         time.sleep(2)
         boss1_number = random.randint(1, 10)
         boss1_guess = None
-        boss1_lifes = 4
+        boss1_lifes = 3
         print("???: 'Welcome to my game", defult_player.name + ", you have", boss1_lifes, "guesses to guess the number I am thinking of (1-10)'.\n")
         time.sleep(2)
         boss1_fight = True
